@@ -11,9 +11,9 @@ namespace SnakesAndLaddersSimulator
     {
         SnakeOrLadderEntity[] SnakesAndLadders = new SnakeOrLadderEntity[0];
 
-        public void LoadGameBoard(SnakeOrLadderEntity[] snakesAndLadders)
+        public void LoadGameBoard(SnakeOrLadderEntity[] gameBoard)
         {
-            SnakesAndLadders = snakesAndLadders;
+            SnakesAndLadders = gameBoard;
         }
 
         public OneGameStatisticsDto Simlulate(int maxTurns, bool liveGameLogging = false)

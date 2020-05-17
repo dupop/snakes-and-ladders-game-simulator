@@ -10,15 +10,15 @@ namespace SnakesAndLaddersSimulator
 {
     class Program
     {
-        public const string IntputFileName = "SnakesAndLadders.txt";
+        public const string IntputFileName = "GameBoardData.txt";
 
         static void Main(string[] args)
         {
             GameSimluator simluator = new GameSimluator();
 
             //import board data
-            var snakesAndLadders = SnakeOrLadderImporter.LoadSnakesAndLadders(IntputFileName);
-            simluator.LoadGameBoard(snakesAndLadders);
+            SnakeOrLadderEntity[] gameBoard = GameBoardImporter.LoadGameBoard(IntputFileName);
+            simluator.LoadGameBoard(gameBoard);
 
             //do a huge test
             SimulationConfig simulationConfig = UserInteraction.AskUserForSimulationConfig();

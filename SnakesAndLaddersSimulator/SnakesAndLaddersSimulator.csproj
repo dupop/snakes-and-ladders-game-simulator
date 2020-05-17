@@ -45,12 +45,12 @@
   <ItemGroup>
     <Compile Include="Model\OneGameStatisticsDto.cs" />
     <Compile Include="Model\StaticsParametersOfAnArrayDto.cs" />
-    <Compile Include="DataImportExport\SnakeOrLadderImporter.cs" />
+    <Compile Include="DataImportExport\GameBoardImporter.cs" />
     <Compile Include="DataImportExport\SnakeOrLadderValidator.cs" />
     <Compile Include="Model\SnakeOrLadderEntity.cs" />
     <Compile Include="Model\SnakeOrLadderVariant.cs" />
-    <Compile Include="UserInteraction.cs" />
-    <Compile Include="MonteCarloAnalysis.cs" />
+    <Compile Include="MonteCarloAnalysis\UserInteraction.cs" />
+    <Compile Include="MonteCarloAnalysis\MonteCarloAnalysis.cs" />
     <Compile Include="Model\SimulationConfig.cs" />
     <Compile Include="StatisticsCalculation\MathemtaticalStatisticCalculator.cs" />
     <Compile Include="DataImportExport\RawStatisticDataCsvExporter.cs" />
@@ -63,7 +63,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="SnakesAndLadders.txt">
+    <Content Include="GameBoardData.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

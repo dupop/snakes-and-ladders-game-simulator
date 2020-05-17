@@ -7,29 +7,29 @@ using System.Threading.Tasks;
 
 namespace SnakesAndLaddersSimulator
 {
-    public static class SnakeOrLadderImporter
+    public static class GameBoardImporter
     {
-        public static SnakeOrLadderEntity[] LoadSnakesAndLadders(string filePath)
+        public static SnakeOrLadderEntity[] LoadGameBoard(string filePath)
         {
-            //Console.WriteLine($"Started loading snakes and ladders complete.");
+            Console.WriteLine($"Started loading a game board.");
 
             if (!File.Exists(filePath))
             {
-                Console.WriteLine($"ERROR: Files with snakes and ladders not found: Filename = {filePath}.");
+                Console.WriteLine($"ERROR: Files with game board not found: Filename = {filePath}.");
                 return new SnakeOrLadderEntity[0];
             }
 
             var lines = File.ReadAllLines(filePath);
 
-            SnakeOrLadderEntity[] snakeOrLadderEntity = ParseLines(lines);
+            SnakeOrLadderEntity[] gameBoard = ParseLines(lines);
 
-            Console.WriteLine($"Number of snakes and ladders loaded: {snakeOrLadderEntity.Length}.");
-            return snakeOrLadderEntity;
+            Console.WriteLine($"Number of snakes and ladders on game board: {gameBoard.Length}.");
+            return gameBoard;
         }
 
         private static SnakeOrLadderEntity[] ParseLines(string[] lines)
         {
-            List<SnakeOrLadderEntity> snakesAndLadders = new List<SnakeOrLadderEntity>();
+            List<SnakeOrLadderEntity> snakesAndLaddersOnBoard = new List<SnakeOrLadderEntity>();
 
             foreach (string line in lines)
             {
@@ -37,17 +37,17 @@ namespace SnakesAndLaddersSimulator
 
                 if (snakeOrLadder != null)
                 {
-                    //Console.WriteLine($"Loadded a {snakeOrLadder.GetVariant()} from {snakeOrLadder.HeadPosition} to {snakeOrLadder.TailPosition}.");
-                    snakesAndLadders.Add(snakeOrLadder);
+                    Console.WriteLine($"Loadded a {snakeOrLadder.GetVariant()} from {snakeOrLadder.HeadPosition} to {snakeOrLadder.TailPosition}.");
+                    snakesAndLaddersOnBoard.Add(snakeOrLadder);
                 }
             }
 
-            if (!SnakeOrLadderValidator.ValidateSnakesLadderCombinations(snakesAndLadders))
+            if (!SnakeOrLadderValidator.ValidateSnakesLadderCombinations(snakesAndLaddersOnBoard))
             {
                 return new SnakeOrLadderEntity[0];
             }
 
-            return snakesAndLadders.ToArray();
+            return snakesAndLaddersOnBoard.ToArray();
         }
 
         public static SnakeOrLadderEntity ParseLine(string line)
