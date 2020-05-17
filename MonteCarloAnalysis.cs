@@ -49,5 +49,6 @@ namespace SnakesAndLaddersSimulator
             Console.WriteLine($"Simulation done. Simulation actual duration: {simluationDuration.Seconds}s\n");
             return allGameStats;
         }
+
     }
 }

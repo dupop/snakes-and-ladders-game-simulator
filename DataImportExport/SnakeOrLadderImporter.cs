@@ -64,7 +64,7 @@ namespace SnakesAndLaddersSimulator
                 return null;
             }
 
-            string[] lineParts = line.Split(new char[] { ' ' });
+            string[] lineParts = line.Split(' ');
 
             if (lineParts.Length < 2)
             {

@@ -86,7 +86,7 @@ namespace SnakesAndLaddersSimulator.Statistics
             }
             else
             {
-                deviationInPercents = double.MaxValue;//could also be -infinity or undifined, but this scneario is not important that much
+                deviationInPercents = double.NaN; //could be postive or ngeative infinity or undifined, but this scneario is not important that much
             }
 
             return deviationInPercents;

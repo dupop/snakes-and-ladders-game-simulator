@@ -49,8 +49,9 @@
     <Compile Include="DataImportExport\SnakeOrLadderValidator.cs" />
     <Compile Include="Model\SnakeOrLadderEntity.cs" />
     <Compile Include="Model\SnakeOrLadderVariant.cs" />
+    <Compile Include="UserInteraction.cs" />
     <Compile Include="MonteCarloAnalysis.cs" />
-    <Compile Include="SimulationConfig.cs" />
+    <Compile Include="Model\SimulationConfig.cs" />
     <Compile Include="StatisticsCalculation\MathemtaticalStatisticCalculator.cs" />
     <Compile Include="DataImportExport\RawStatisticDataCsvExporter.cs" />
     <Compile Include="StatisticsCalculation\GameStatisticCalculator.cs" />

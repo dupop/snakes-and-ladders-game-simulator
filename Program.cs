@@ -21,7 +21,7 @@ namespace SnakesAndLaddersSimulator
             simluator.LoadGameBoard(snakesAndLadders);
 
             //do a huge test
-            var simulationConfig = SimulationConfig.Default;
+            SimulationConfig simulationConfig = UserInteraction.AskUserForSimulationConfig();
             MonteCarloAnalysis.ExecuteStatisticalAnalysis(simluator, simulationConfig);
 
             //exeute one test live

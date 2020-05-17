@@ -26,7 +26,7 @@ namespace SnakesAndLaddersSimulator
         /// <summary>
         /// Number of Monte Carlo iterations to execute.
         /// </summary>
-        public int NumberOfIterations = 5000;
+        public int NumberOfIterations = 1000;
 
         /// <summary>
         /// Number of progress logs to make during simulation execution.
@@ -38,6 +38,16 @@ namespace SnakesAndLaddersSimulator
         /// Number of turns after which game simulation is aborted.
         /// </summary>
         public int MaxTurns = 100;
+
+        public override string ToString()
+        {
+            return "[DurationOfOneMoveInSeconds = " + DurationOfOneMoveInSeconds +
+                ", NumberOfIterations = " + NumberOfIterations +
+                ", NumberOfProgressLogs = " + NumberOfProgressLogs +
+                ", MaxTurns = " + MaxTurns
+                + "]";
+        }
+
     }
 
     
