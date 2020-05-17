@@ -1,0 +1,44 @@
+#Snakes on lower half of the map
+91 32
+88 62
+63 44
+84 21
+
+#Snakes on upper-left corner
+#53 69 - wrong direction, can't even be reversed becase there are ladders there
+96 68
+94 67
+51 34
+
+#snakes on upper-central part of map
+73 39
+27 6
+
+#Snakes on uppper-right part of map
+40 30
+41 20
+82 80
+
+
+#Ladders on lower half of the map
+2 4
+31 45
+23 66
+46 86
+48 69
+89 92
+
+#Ladders on upper-left and upper-central part of amp
+35 37
+24 38
+72 98
+18 75
+
+#Ladders on upper-right part of amp
+57 76
+43 58
+
+
+
+
+
