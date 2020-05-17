@@ -3,11 +3,6 @@ Statistical analysis of a "Snakes &amp; ladders" board game
 
 
 # Possible program output:
-> # snakes-and-ladders-game-simulator
-> Statistical analysis of a "Snakes &amp; ladders" board game
-> 
-> 
-> Program output:
 > 
 > Number of snakes and ladders loaded: 24.
 > 
