@@ -29,7 +29,7 @@ namespace SnakesAndLaddersSimulator
 
             DateTime simluationStartTime = DateTime.Now;
 
-            Console.WriteLine($"\n\nRunning simulation with {numberOfIterations} iterations:\n");
+            Console.WriteLine($"\r\n\r\nRunning simulation with {numberOfIterations} iterations:\r\n");
             for (int i = 0; i < numberOfIterations; i++)
             {
                 OneGameStatisticsDto currentGameStats = simluator.Simlulate(maxTurns);
@@ -46,7 +46,7 @@ namespace SnakesAndLaddersSimulator
 
             DateTime simluationEndTime = DateTime.Now;
             TimeSpan simluationDuration = simluationEndTime - simluationStartTime;
-            Console.WriteLine($"Simulation done. Simulation actual duration: {simluationDuration.Seconds}s\n");
+            Console.WriteLine($"Simulation done. Simulation actual duration: {simluationDuration.Seconds}s\r\n");
             return allGameStats;
         }
 

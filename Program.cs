@@ -25,7 +25,7 @@ namespace SnakesAndLaddersSimulator
             MonteCarloAnalysis.ExecuteStatisticalAnalysis(simluator, simulationConfig);
 
             //exeute one test live
-            Console.WriteLine("\n\nExecuting one game with live scores:");
+            Console.WriteLine("\r\n\r\nExecuting one game with live scores:");
             simluator.Simlulate(100, true);
 
             //keep program open

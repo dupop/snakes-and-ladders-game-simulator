@@ -12,7 +12,7 @@ namespace SnakesAndLaddersSimulator
     {
         public static SimulationConfig AskUserForSimulationConfig()
         {
-            Console.WriteLine($"\n\nDefault simulation config:\n{SimulationConfig.Default.ToString()}.");
+            Console.WriteLine($"\r\n\r\nDefault simulation config:\r\n{SimulationConfig.Default.ToString()}.");
             Console.WriteLine($"Press ENTER to begin or input custom comma separated values.");
             string userResponse = Console.ReadLine();
 
@@ -42,7 +42,7 @@ namespace SnakesAndLaddersSimulator
                             MaxTurns = int.Parse(configValues[3])
                         };
 
-                        Console.WriteLine($"Using user config:\n{simulationConfig.ToString()}.");
+                        Console.WriteLine($"Using user config:\r\n{simulationConfig.ToString()}.");
 
                     }
                     catch

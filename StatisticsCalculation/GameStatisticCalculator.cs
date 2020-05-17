@@ -13,7 +13,7 @@ namespace SnakesAndLaddersSimulator.Statistics
 
         public static void CalculateAndWriteStatisticConclusions(List<OneGameStatisticsDto> allGameStats, int durationOfOneMoveInSeconds)
         {
-            Console.WriteLine($"\nGame statistical analysis:\n");
+            Console.WriteLine($"\r\nGame statistical analysis:\r\n");
             CalculateAndWriteStatisticConclusionsForOneParam(allGameStats, oneGameStats => oneGameStats.Turns * durationOfOneMoveInSeconds / 60, "Duration per player [min] (15s per move assumed)");
             CalculateAndWriteStatisticConclusionsForOneParam(allGameStats, oneGameStats => oneGameStats.Jumps, "Jumps");
 
@@ -21,7 +21,7 @@ namespace SnakesAndLaddersSimulator.Statistics
             //CalculateAndWriteStatisticConclusionsForOneParam(allGameStats, oneGameStats => oneGameStats.Turns, "Turns");
             //CalculateAndWriteStatisticConclusionsForOneParam(allGameStats, oneGameStats => oneGameStats.BlockedTimes, "Times palyer was blocked");
 
-            Console.WriteLine($"\nStatistical method and disclaimer:\n");
+            Console.WriteLine($"\r\nStatistical method and disclaimer:\r\n");
             Console.WriteLine($"* Caluclation done by using Monte Carlo analysis on {allGameStats.Count} game runs.");
             Console.WriteLine($"* Probablity of human readable conclusions is 68% as one sigma is meant by \"usually\".");
             Console.WriteLine($"* Effects of Monte Carlo uncertanity not taken into account in word \"usually\".");
@@ -59,7 +59,7 @@ namespace SnakesAndLaddersSimulator.Statistics
             string deviationInPercents = deviationInPercentsDecimal.ToString(decimalsFormatting);
 
             Console.WriteLine($"{gameParameterName}: avg = {avg}, std dev = {stdDev}, min = {min}, max = {max}.");
-            Console.WriteLine($"Game will usually have {avg} +- {stdDev} (i.e. {stdDevLowerBound} - {stdDevUpperBound}) {gameParameterName.ToLower()}.\n"); // this statement has certanity of 68%
+            Console.WriteLine($"Game will usually have {avg} +- {stdDev} (i.e. {stdDevLowerBound} - {stdDevUpperBound}) {gameParameterName.ToLower()}.\r\n"); // this statement has certanity of 68%
         }
 
         /// <summary>

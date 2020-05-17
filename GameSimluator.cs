@@ -36,7 +36,7 @@ namespace SnakesAndLaddersSimulator
 
                 int diceResult = ThrowDice();
                 thrownDices++;
-                if (liveGameLogging) Console.WriteLine($"\nPlayer is on position {playerPosition}. Dice gave result {diceResult} on throwing number {thrownDices}.");
+                if (liveGameLogging) Console.WriteLine($"\r\nPlayer is on position {playerPosition}. Dice gave result {diceResult} on throwing number {thrownDices}.");
                 
 
                 //check if player would be moved out of the board
@@ -77,7 +77,7 @@ namespace SnakesAndLaddersSimulator
                 BlockedTimes = numberOfTimesPlayerIsBlocked
             };
 
-            if (liveGameLogging) Console.WriteLine($"\nLast game statistics: Turns: {thrownDices}, Jumps: {numberOfJumps}, Times player was unable to move: {numberOfTimesPlayerIsBlocked}");
+            if (liveGameLogging) Console.WriteLine($"\r\nLast game statistics: Turns: {thrownDices}, Jumps: {numberOfJumps}, Times player was unable to move: {numberOfTimesPlayerIsBlocked}");
             
             return stats;
         }
