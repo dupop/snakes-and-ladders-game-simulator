@@ -58,7 +58,7 @@ namespace SnakesAndLaddersSimulator
                     int whereToJump = snakeOrLadderAtNewPlayerPosition.TailPosition;
 
                     if (liveGameLogging) Console.WriteLine($"Player jumped to position {whereToJump}. \t\t<-- IMPORTANT");
-                    playerPosition = snakeOrLadderAtNewPlayerPosition.TailPosition;
+                    playerPosition = whereToJump;
                     numberOfJumps++;
                 }
 

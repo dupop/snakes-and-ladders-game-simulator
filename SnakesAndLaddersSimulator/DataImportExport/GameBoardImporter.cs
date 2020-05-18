@@ -50,7 +50,7 @@ namespace SnakesAndLaddersSimulator
             return snakesAndLaddersOnBoard.ToArray();
         }
 
-        public static SnakeOrLadderEntity ParseLine(string line)
+        private static SnakeOrLadderEntity ParseLine(string line)
         {
             if (line.StartsWith("#"))
             {

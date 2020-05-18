@@ -29,7 +29,7 @@ namespace SnakesAndLaddersSimulator
                 return false;
             }
 
-            if (headPosition == 0)
+            if (headPosition == 100)
             {
                 Console.WriteLine($"ERROR: Snake has head at position 100. The game could never be ended with such a snake.");
                 return false;
@@ -57,8 +57,6 @@ namespace SnakesAndLaddersSimulator
 
         private static bool ValidateNoHeadAndATailAreOnSameLocation(List<SnakeOrLadderEntity> snakesAndLadders)
         {
-
-            //TODO: impl
             for (int i = 1; i < 100; i++)
             {
                 int headsAtLocation = snakesAndLadders.Count(snakeOrLadded => snakeOrLadded.HeadPosition == i);
@@ -78,9 +76,7 @@ namespace SnakesAndLaddersSimulator
         {
             for (int i = 1; i < 100; i++)
             {
-                var snakesAndLaddersWithHeadAtLocation = snakesAndLadders.Where(snakeOrLadded => snakeOrLadded.HeadPosition == i);
-
-                if (snakesAndLaddersWithHeadAtLocation.Count() > 1)
+                if (snakesAndLadders.Count(snakeOrLadded => snakeOrLadded.HeadPosition == i) > 1)
                 {
                     Console.WriteLine($"ERROR: Multiple snakes/ladders heads at same location. Location = {i}.");
                     return false;
