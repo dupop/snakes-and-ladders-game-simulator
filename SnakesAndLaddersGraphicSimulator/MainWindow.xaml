@@ -1,0 +1,30 @@
+﻿<Window x:Class="SnakesAndLaddersGraphicSimulator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SnakesAndLaddersGraphicSimulator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name="WholeScreenGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="1" x:Name="LiveScore" Background="Gray">
+            <Label Content="Game live score:" HorizontalAlignment="Left" Margin="129,29,0,0" VerticalAlignment="Top"/>
+        </Grid>
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Viewbox Stretch="Uniform">
+                <Canvas x:Name="GameBoard" Height="100" Width="100" Background="Black"/>
+            </Viewbox>
+            <Border Grid.Row="1" Background="Gray"/>
+
+        </Grid>
+
+    </Grid>
+</Window>

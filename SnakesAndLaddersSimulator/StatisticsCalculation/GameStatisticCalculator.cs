@@ -18,7 +18,7 @@ namespace SnakesAndLaddersSimulator.Statistics
             CalculateAndWriteStatisticConclusionsForOneParam(allGameStats, oneGameStats => oneGameStats.Jumps, "Jumps");
 
             //not interesting calculations:
-            //CalculateAndWriteStatisticConclusionsForOneParam(allGameStats, oneGameStats => oneGameStats.Turns, "Turns");
+            CalculateAndWriteStatisticConclusionsForOneParam(allGameStats, oneGameStats => oneGameStats.Turns, "Turns");
             //CalculateAndWriteStatisticConclusionsForOneParam(allGameStats, oneGameStats => oneGameStats.BlockedTimes, "Times palyer was blocked");
 
             Console.WriteLine($"\r\nStatistical method and disclaimer:\r\n");
